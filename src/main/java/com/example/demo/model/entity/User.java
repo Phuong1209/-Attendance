@@ -23,13 +23,13 @@ public class User {
             joinColumns = @JoinColumn(name="user_id"),
             inverseJoinColumns = @JoinColumn(name = "position_id")
     )
-    private int position_id;
+    private Position position;
     @ManyToMany
     @JoinTable(
             name="department",
             joinColumns = @JoinColumn(name="user_id"),
             inverseJoinColumns = @JoinColumn(name = "department_id")
     )
-    private int department_id;
+    private Department department;
 
 }

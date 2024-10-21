@@ -4,14 +4,14 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "users")
+@Table(name = "user_department")
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 
 public class UserDepartment {
-    private long user_id;
-
+    private User user_id;
+    private Department department_id;
 
 }
