@@ -12,13 +12,14 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(name="Department")
+@Table(name="department")
 public class Department {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String department_name;
-    @ManytoMany
-    @JoinColumn(name="")
+    @ManyToMany
+    @JoinColumn(name="department_id",nullable=false)
+    private DepartmentJobtype departmentJobtype;
 
 }

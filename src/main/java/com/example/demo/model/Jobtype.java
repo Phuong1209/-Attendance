@@ -14,17 +14,17 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(name="jobtype")
+@Table(name="jobType")
 public class Jobtype {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
-    private String jobtype_name;
+    private String jobType_name;
     private LocalDateTime create_at;
     private LocalDateTime update_at;
     @ManyToMany
-    @JoinColumn(name="jobtype_id",nullable=false)
-    private DepartmentJobtype departmentJobtype;
+    @JoinColumn(name="jobType_id",nullable=false)
+    private DepartmentJobtype department;
 
 
 
