@@ -18,11 +18,10 @@ public class DepartmentJobtype {
     @GeneratedValue(strategy = GenerationType.UUID)
     private Long department_id;
     private Long jobType_id;
-    @ManyToMany(mappedBy="jobType",cascade=CascadeType.ALL)
+    @ManyToMany
     private Set<Jobtype> jobType;
-    @ManyToMany(mappedBy="department_id",cascade=CascadeType.ALL)
+    @ManyToMany
     private Set<Department>department;
-
 
 
 }

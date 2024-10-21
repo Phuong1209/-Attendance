@@ -23,7 +23,6 @@ public class Jobtype {
     private LocalDateTime create_at;
     private LocalDateTime update_at;
     @ManyToMany
-    @JoinColumn(name="jobType_id",nullable=false)
     private DepartmentJobtype department;
 
 
