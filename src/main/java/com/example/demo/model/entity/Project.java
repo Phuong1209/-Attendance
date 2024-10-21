@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.Set;
 
 @Entity
 @Data
@@ -18,12 +19,14 @@ import java.time.LocalDateTime;
 public class Project {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    @OneToMany(mappedBy = "projects", cascade = CascadeType.ALL)
-    private Long id;
+    private String id;
     private String name;
     private String code;
     private LocalDateTime create_at;
     private LocalDateTime update_at;
+    @OneToMany(mappedBy = "projects",cascade = CascadeType.ALL)
+    private Set<TaskManagement> taskManagement;
+
 
 
 
