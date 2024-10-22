@@ -11,7 +11,9 @@ import lombok.*;
 @Data
 
 public class UserDepartment {
-    private long user_id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long user_id;
 
 
 }

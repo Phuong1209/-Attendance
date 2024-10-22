@@ -18,7 +18,7 @@ public class Department {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String department_name;
-    @ManyToMany
-    private DepartmentJobtype departmentJobtype;
+//    @ManyToMany
+//    private DepartmentJobtype departmentJobtype;
 
 }

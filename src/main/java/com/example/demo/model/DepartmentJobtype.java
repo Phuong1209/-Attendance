@@ -12,16 +12,14 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(name="departmentJobtype")
+@Table(name = "department_jobtype")
 public class DepartmentJobtype {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long department_id;
-    private Long jobType_id;
-    @ManyToMany
-    private Set<Jobtype> jobType;
-    @ManyToMany
-    private Set<Department>department;
 
+    private Long jobType_id ;
 
+    // getters and setters
 }
+

@@ -20,10 +20,9 @@ public class Jobtype {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
     private String jobType_name;
-    private LocalDateTime create_at;
-    private LocalDateTime update_at;
-    @ManyToMany
-    private DepartmentJobtype department;
+
+//    @ManyToMany
+//    private DepartmentJobtype department;
 
 
 

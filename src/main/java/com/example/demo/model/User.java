@@ -13,23 +13,13 @@ import lombok.*;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
     private String user_name;
     private String user_fullname;
     private String user_passwords;
-    @ManyToMany
-    @JoinTable(
-            name="position",
-            joinColumns = @JoinColumn(name="user_id"),
-            inverseJoinColumns = @JoinColumn(name = "position_id")
-    )
-    private int position_id;
-    @ManyToMany
-    @JoinTable(
-            name="department",
-            joinColumns = @JoinColumn(name="user_id"),
-            inverseJoinColumns = @JoinColumn(name = "department_id")
-    )
-    private int department_id;
+//    @ManyToMany
+    private Integer position_id;
+//    @ManyToMany
+    private Integer department_id;
 
 }
