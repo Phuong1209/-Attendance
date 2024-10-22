@@ -8,13 +8,14 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import java.time.LocalDateTime;
+import java.util.Set;
 
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(name="jobType")
+@Table(name="job_types")
 public class Jobtype {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
@@ -23,9 +24,6 @@ public class Jobtype {
     private LocalDateTime create_at;
     private LocalDateTime update_at;
     @ManyToMany
-    @JoinColumn(name="jobType_id",nullable=false)
-    private DepartmentJobtype department;
-
-
+    private Set<DepartmentJobtype> department;
 
 }
