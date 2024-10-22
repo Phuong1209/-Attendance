@@ -3,6 +3,8 @@ package com.example.demo.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.Set;
+
 @Entity
 @Table(name = "users")
 @Builder
@@ -23,13 +25,13 @@ public class User {
             joinColumns = @JoinColumn(name="user_id"),
             inverseJoinColumns = @JoinColumn(name = "position_id")
     )
-    private Position position;
+    private Set<Position> position;
     @ManyToMany
     @JoinTable(
             name="department",
             joinColumns = @JoinColumn(name="user_id"),
             inverseJoinColumns = @JoinColumn(name = "department_id")
     )
-    private Department department;
+    private Set<Department> department;
 
 }

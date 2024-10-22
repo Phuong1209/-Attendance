@@ -5,6 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Set;
+
 @Entity
 @Data
 @AllArgsConstructor
@@ -17,7 +19,6 @@ public class Department {
     private Long id;
     private String department_name;
     @ManyToMany
-    @JoinColumn(name="department_id",nullable=false)
-    private DepartmentJobtype departmentJobtype;
+    private Set<DepartmentJobtype> departmentJobtype;
 
 }

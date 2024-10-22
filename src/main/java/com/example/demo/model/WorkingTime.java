@@ -12,9 +12,9 @@ import java.time.LocalDateTime;
 @Data
 public class WorkingTime {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private String id;
-    private String user_id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    private Long user_id;
     private LocalDate date;
     private LocalDateTime checkin_time;
     private LocalDateTime checkout_time;

@@ -13,6 +13,6 @@ import lombok.*;
 public class Position {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
     private String position_name;
 }

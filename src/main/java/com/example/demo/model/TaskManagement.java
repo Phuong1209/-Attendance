@@ -31,7 +31,6 @@ public class TaskManagement {
     private Project projects;
 
     @ManyToOne
-    @JoinColumn(name = "jobtype_id", nullable = false)
     private Jobtype jobtypes;
 
 

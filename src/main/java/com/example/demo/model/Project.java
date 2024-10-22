@@ -18,8 +18,8 @@ import java.util.Set;
 
 public class Project {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private String id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     private String name;
     private String code;
     private LocalDateTime create_at;
